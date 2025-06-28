@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+## 🧱 React Modern Starter Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🚀 نظرة عامة
 
-Currently, two official plugins are available:
+مشروع قالب حديث مبني باستخدام **React + TypeScript + Vite**، ومصمم ليكون قابلًا للتوسعة وسهل التخصيص. يحتوي على إعدادات متقدمة تشمل إدارة الحالة، الترجمة، طلبات API، والنماذج التفاعلية باستخدام أفضل المكتبات في بيئة React الحديثة.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### 🧰 التقنيات والأدوات المستخدمة
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **React 18** + **TypeScript**
+-   **Vite** لبناء التطبيق بسرعة
+-   **Zustand** لإدارة الحالة البسيطة والفعالة
+-   **React Query** لإدارة البيانات من API
+-   **Axios** مع instance موحد للطلبات
+-   **i18next** لدعم التعدد اللغوي (عربي / إنجليزي)
+-   **Zod + React Hook Form** للتحقق من صحة البيانات بالنماذج
+-   **Shadcn/UI** لإنشاء Dialogs وواجهات أنيقة وسهلة الاستخدام
+-   **TailwindCSS** لتصميم سريع ومتجاوب
+-   هيكلية مجلدات واضحة قابلة للتوسع
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+### 📁 هيكل المشروع
+
+```bash
+src/
+├── components/         # مكونات UI (مثل TodoList, Dialogs)
+├── lib/                # مكتبات مشتركة مثل axios instance و queryClient
+├── store/              # إدارة الحالة باستخدام Zustand
+├── pages/              # الصفحات (مثل todos)
+├── schemas/            # Zod schemas للنماذج
+├── locales/            # ملفات الترجمة i18n
+├── types/              # تعريفات TypeScript مشتركة
+├── App.tsx             # نقطة دخول التطبيق
+└── main.tsx            # تكامل React Query, i18n, إلخ.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🧪 مثال عملي: صفحة المهام (Todos)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+-   عرض قائمة todos من API
+-   واجهة CRUD كاملة (إضافة / تعديل / حذف) باستخدام Dialogs من shadcn/ui
+-   تخزين اللغة والثيم في localStorage عبر Zustand
+-   ترجمة ديناميكية للمحتوى
+
+---
+
+### ✅ مزايا المشروع
+
+-   ⚙️ بنية جاهزة وقابلة للتوسعة
+-   🌐 دعم تعدد اللغات من البداية
+-   📦 تكامل كامل مع React Query وZustand
+-   🧪 قابلية عالية للاختبار والتخصيص
+-   💡 مثالي للانطلاق بسرعة في أي مشروع جديد
+
+---
+
+### 📦 بدء التشغيل
+
+```bash
+# تثبيت الحزم
+pnpm install
+
+# تشغيل المشروع
+pnpm dev
 ```
+
+---
+
+### 🧱 ملاحظات
+
+-   يمكن التبديل بين اللغات والتيمات من الواجهة
+-   المشروع يدعم إضافة المزيد من الصفحات أو المكونات بسهولة بفضل بنية واضحة ومنظمة
+-   الـ todos حاليًا مرتبطة بـ API خارجي (dummyjson.com)
+
+---

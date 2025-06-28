@@ -1,0 +1,19 @@
+{
+	"welcome": "Welcome",
+	"description": "This is a boilerplate project",
+	"error": {
+		"error-heading": "An unexpected error occurred.",
+		"go-home": "Go back home"
+	},
+	"loading": "Loading",
+	"error_loading_todos": "Failed to load todos",
+	"todos": "Todos",
+	"id": "ID",
+	"task": "Task",
+	"completed": "Completed",
+	"actions": "Actions",
+	"done": "Done",
+	"pending": "Pending",
+	"edit": "Edit",
+	"delete": "Delete"
+}

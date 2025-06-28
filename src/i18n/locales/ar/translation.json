@@ -1,0 +1,19 @@
+{
+	"welcome": "مرحبا",
+	"description": "هذا مشروع جاهز للانطلاق",
+	"error": {
+		"error-heading": "خطأ",
+		"go-home": "العودة للصفحة الرئيسية"
+	},
+	"loading": "جاري التحميل",
+	"error_loading_todos": "فشل في تحميل المهام",
+	"todos": "المهام",
+	"id": "المعرف",
+	"task": "المهمة",
+	"completed": "تمت",
+	"actions": "الإجراءات",
+	"done": "منجز",
+	"pending": "قيد التنفيذ",
+	"edit": "تعديل",
+	"delete": "حذف"
+}
